@@ -23,7 +23,7 @@ public class Array {
         for(int i = 0; i < arr.length-1; i++){
             rv = arr[i];
             for (int j = 0; j < arr.length-1; j++){
-                if (rv >= arr[j]){
+                if (rv < arr[j]){
                     rv = arr[j];
                 }
             }
@@ -33,7 +33,15 @@ public class Array {
 
     // hier wird das kleinste Element des Arrays gesucht
     public static int arrayMin(int[] arr) {
-        int rv = Integer.MIN_VALUE;
+        int rv = 0;
+        for(int i = 0; i < arr.length-1; i++){
+            rv = arr[i];
+            for (int j = 0; j < arr.length-1; j++){
+                if (rv > arr[j]){
+                    rv = arr[j];
+                }
+            }
+            }
         return rv;
     }
 
