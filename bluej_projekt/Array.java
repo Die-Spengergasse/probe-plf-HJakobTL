@@ -51,6 +51,10 @@ public class Array {
         for (int i = 0; i < arg.length-1; i++){
              arr[i] = arg[arg.length-i-1]; 
         }
+        for (int j = 0; j < arg.length-1; j++){
+            int zws = arr[j];
+            
+        }
         return arr;
     }
 }
