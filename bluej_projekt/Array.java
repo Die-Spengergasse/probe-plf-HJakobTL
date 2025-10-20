@@ -47,6 +47,12 @@ public class Array {
 
     // gib ein neues Array zurück, aber in der umgedrehten Reihenfolge!
     public static int[] toReversed(int[] arg) {
-        return new int[arg.length];
+        for (int i = 0; i < arg.length-1; i++){
+            int zws = 0;
+            zws = arg[i];
+            arg[i] = arg[arg.length-i];
+            arg[arg.length-i] = zws;
+        }
+        return arg;
     }
 }
