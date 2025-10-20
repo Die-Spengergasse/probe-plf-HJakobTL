@@ -20,12 +20,12 @@ public class Array {
     // hier wird das größte Element des Arrays gesucht
     public static int arrayMax(int[] arr) {
         int rv = 0;
-        for(int i = 0; i < arr.length; i++){
-            if (arr[i] > arr[i+1]){
-                rv = arr[i];
-            }
-            else if (arr[i+1] > arr[i]){
-                rv = arr[i+1];
+        for(int i = 0; i < arr.length-1; i++){
+            rv = arr[i];
+            for (int j = 0; j < arr.length-1; j++){
+                if (rv >= arr[j]){
+                    rv = arr[j];
+                }
             }
             }
         return rv;
