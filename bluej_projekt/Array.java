@@ -21,10 +21,13 @@ public class Array {
     public static int arrayMax(int[] arr) {
         int rv = 0;
         for(int i = 0; i < arr.length; i++){
-            if (arr[i] == Integer.MAX_VALUE){
+            if (arr[i] > arr[i+1]){
                 rv = arr[i];
             }
-        }
+            else if (arr[i+1] > arr[i]){
+                rv = arr[i+1];
+            }
+            }
         return rv;
     }
 
